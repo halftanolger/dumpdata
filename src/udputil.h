@@ -11,12 +11,18 @@ typedef struct udputil_st {
 	char  major_version;
 	char  minor_version;
 	char *function;
+	char  help;
+	char  debug;	
 	
 } UDPUTIL;
 
 void init(int argc, char* argv[], UDPUTIL* data);
 
 void usage();
+
+int udputil_server(UDPUTIL* data);
+
+int udputil_client(UDPUTIL* data);
 
 #ifdef __cplusplus
 }
